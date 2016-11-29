@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="900.0" styleClass="gridBackground" stylesheets="@../application/application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.eventhandler.MemberController">
+   <children>
+      <Label layoutX="284.0" layoutY="18.0" styleClass="headingWhite" text="Member Module">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tablelist" layoutX="14.0" layoutY="189.0" prefHeight="305.0" prefWidth="738.0">
+        <columns>
+          <TableColumn fx:id="serailNumbert" prefWidth="75.0" text="S.N" />
+          <TableColumn fx:id="fullNamet" prefWidth="189.0" text="Full Name" />
+            <TableColumn fx:id="addresst" prefWidth="169.0" text="Address" />
+            <TableColumn fx:id="memberTypet" prefWidth="145.0" text="Member Type" />
+            <TableColumn fx:id="packageTypet" prefWidth="112.0" text="Package Type" />
+        </columns>
+      </TableView>
+      <Label layoutX="17.0" layoutY="159.0" prefHeight="17.0" prefWidth="225.0" text="Member List" />
+      <ImageView fx:id="home" fitHeight="40.0" fitWidth="40.0" layoutX="17.0" layoutY="22.0" onMouseClicked="#goToHome" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../resources/home.png" />
+         </image>
+      </ImageView>
+      <Pane layoutX="14.0" layoutY="114.0" prefHeight="62.0" prefWidth="869.0" styleClass="lightbackground">
+         <children>
+            <Label layoutX="11.0" layoutY="4.0" text="Full Name">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="fullName" layoutX="11.0" layoutY="22.0" prefHeight="25.0" prefWidth="141.0" />
+            <Label layoutX="174.0" layoutY="4.0" text="Address">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="address" layoutX="174.0" layoutY="23.0" prefHeight="25.0" prefWidth="133.0" />
+            <Label layoutX="336.0" layoutY="2.0" text="Type">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="memberType" layoutX="336.0" layoutY="23.0" prefHeight="25.0" prefWidth="133.0" promptText="Select Member Type" />
+            <Label layoutX="495.0" layoutY="1.0" text="Package">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="packageType" layoutX="495.0" layoutY="22.0" prefHeight="25.0" prefWidth="133.0" promptText="Select Package" />
+            <Button fx:id="addMember" layoutX="637.0" layoutY="22.0" mnemonicParsing="false" onAction="#saveMember" prefHeight="30.0" prefWidth="119.0" text="Add Member">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+            <Button layoutX="771.0" layoutY="23.0" mnemonicParsing="false" onAction="#refreshPage" text="Cancel" />
+         </children>
+      </Pane>
+      <Pane layoutX="771.0" layoutY="176.0" prefHeight="318.0" prefWidth="112.0" styleClass="lightbackground">
+         <children>
+            <Button layoutX="8.0" layoutY="44.0" mnemonicParsing="false" onAction="#deleteMember" prefHeight="29.0" prefWidth="92.0" text="Delete" />
+            <Button layoutX="8.0" layoutY="88.0" mnemonicParsing="false" onAction="#editMember" prefHeight="29.0" prefWidth="92.0" text="Edit" />
+         </children>
+      </Pane>
+   </children>
+   
+   
+</AnchorPane>

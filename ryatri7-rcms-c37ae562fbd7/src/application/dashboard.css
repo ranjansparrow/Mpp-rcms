@@ -1,0 +1,21 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+.label {
+    -fx-font-size: 11.0pt;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(one-pass-box, black, 5, 2, 0, 0);
+}
+.labelTitle {
+    -fx-font-size: 20.0pt;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(one-pass-box, black, 5, 2, 0, 0);
+}
+ .dashboardBackground{
+        -fx-background-image: url("../../resources/fieldbg.jpg");
+        -fx-background-repeat: no-repeat;   
+        -fx-background-size: 900.0 506.0;
+        -fx-background-position: center center;
+        -fx-effect: dropshadow(three-pass-box, black, 30.0, 0.5, 0.0, 0.0); 
+    }
